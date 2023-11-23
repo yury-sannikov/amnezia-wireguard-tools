@@ -20,6 +20,7 @@ jobs:
         env:
           ARCH: ${{ matrix.arch }}
           PACKAGES: amnezia-wireguard-tools
+          V: s
 
       # - name: Store packages
       #   uses: actions/upload-artifact@v2
