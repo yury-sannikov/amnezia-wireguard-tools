@@ -8,7 +8,7 @@ jobs:
     strategy:
       matrix:
         arch:
-          - mips_24kc
+          - mipsel_24kc
 
     steps:
       - uses: actions/checkout@v2
@@ -22,8 +22,8 @@ jobs:
           PACKAGES: amnezia-wg-tools
           V: s
 
-      - name: Store packages
+      - name: Store awgtools
         uses: actions/upload-artifact@v2
         with:
-          name: ${{ matrix.arch}}-packages
-          path: bin/packages/${{ matrix.arch }}/packages/*.ipk
+          name: ${{ matrix.arch}}-awgtools
+          path: bin/packages/${{ matrix.arch }}/awgtools/*.ipk
