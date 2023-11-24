@@ -20,7 +20,9 @@ jobs:
         env:
           ARCH: ${{ matrix.arch }}
           PACKAGES: amnezia-wg-tools
-          V: s
+
+      - name: Dump structure
+        run: find ./ -type d
 
       - name: Store awgtools
         uses: actions/upload-artifact@v2
