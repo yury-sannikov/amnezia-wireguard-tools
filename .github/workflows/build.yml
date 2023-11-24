@@ -22,8 +22,8 @@ jobs:
           PACKAGES: amnezia-wg-tools
           V: s
 
-      # - name: Store packages
-      #   uses: actions/upload-artifact@v2
-      #   with:
-      #     name: ${{ matrix.arch}}-packages
-      #     path: bin/packages/${{ matrix.arch }}/packages/*.ipk
+      - name: Store packages
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ matrix.arch}}-packages
+          path: bin/packages/${{ matrix.arch }}/packages/*.ipk
