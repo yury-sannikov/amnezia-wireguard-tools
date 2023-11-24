@@ -19,7 +19,7 @@ jobs:
         uses: openwrt/gh-action-sdk@main
         env:
           ARCH: ${{ matrix.arch }}
-          PACKAGES: amnezia-wireguard-tools
+          PACKAGES: amnezia-wg-tools
           V: s
 
       # - name: Store packages
