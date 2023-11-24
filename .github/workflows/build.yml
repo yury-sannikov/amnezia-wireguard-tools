@@ -8,8 +8,15 @@ jobs:
     strategy:
       matrix:
         arch:
+          - arm_cortex-a7
+          - arm_cortex-a9
+          - mips_24kc
+          - mips_4kec
+          - mips_mips32
           - mipsel_24kc
-
+          - mipsel_24kc_24kf
+          - mipsel_74kc
+          - mipsel_mips32
     steps:
       - uses: actions/checkout@v2
         with:
@@ -21,11 +28,8 @@ jobs:
           ARCH: ${{ matrix.arch }}
           PACKAGES: amnezia-wg-tools
 
-      - name: Dump structure
-        run: ls -al ./bin/packages/mipsel_24kc/action
-
-      - name: Store awgtools
+      - name: Store amnezia-wg-tools Artefacts
         uses: actions/upload-artifact@v2
         with:
-          name: ${{ matrix.arch}}-awgtools
+          name: ${{ matrix.arch}}-amnezia-wg-tools
           path: bin/packages/${{ matrix.arch }}/action/*.ipk
