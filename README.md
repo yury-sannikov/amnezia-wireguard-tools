@@ -10,7 +10,7 @@ This package is a replacement of the OpenWrt [wireguard-tools](https://openwrt.o
 
 ## Prerequisites
 
-You have to insall `amnezia-wg` first. There is no OpenWrt package for your disposal yet. You have to compile it on your own. Thanks to Go language it's pretty easy to do (well if you're handy with Go)
+You have to install `amnezia-wg` first. There is no OpenWrt package for your disposal yet. You have to compile it on your own. Thanks to Go language it's pretty easy to do (well if you're handy with Go)
 - Install Go
 - Check out the https://github.com/amnezia-vpn/amnezia-wg
 - Build it for your router platform
