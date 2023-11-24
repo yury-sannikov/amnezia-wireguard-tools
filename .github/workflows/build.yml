@@ -22,10 +22,10 @@ jobs:
           PACKAGES: amnezia-wg-tools
 
       - name: Dump structure
-        run: find ./ -type d
+        run: ls -al ./bin/packages/mipsel_24kc/action
 
       - name: Store awgtools
         uses: actions/upload-artifact@v2
         with:
           name: ${{ matrix.arch}}-awgtools
-          path: bin/packages/${{ matrix.arch }}/awgtools/*.ipk
+          path: bin/packages/${{ matrix.arch }}/action/*.ipk
